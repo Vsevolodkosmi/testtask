@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <script src="js/main.js"> </script>
+    <title>Test</title>
+</head>
+<body ng-controller="firstCtr">
+    <h1>Enter company name</h1>
+   <form>
+       <input type="text" ng-model=item.company />
+       <input type="text" ng-model=item.earnings />
+    <button ng-click="addNew(item)">Add</button>
+    </form>
+    <div>
+        <p ng-repeat="task in tasksArray">{{task}}<button ng-click="deleteItem(task)">Delete</button><button ng-change="deleteItem(task)">Edit</button></p>
+    </div>
+</body>
+</html>
